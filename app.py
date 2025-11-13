@@ -38,6 +38,11 @@ def process_single_identifier(job_id, identifier):
    
     print(f"Identifier {identifier} for Job {job_id} is PROCESSED.")
 # ---------------------------
+
+@app.route("/", methods=["GET"])
+def home():
+    return "Backend is running on Vercel!"
+
  
 @app.route('/start-job', methods=['POST'])
 def start_job():
